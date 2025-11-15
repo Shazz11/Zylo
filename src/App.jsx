@@ -8,10 +8,11 @@ import ErrorPage from "./pages/ErrorPage";
 import ProductsPage from "./pages/ProductsPage";
 import SingleProductPage from "./pages/SingleProductPage";
 import Navbar from "./components/navbar/Navbar";
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-gray-50">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -21,6 +22,7 @@ function App() {
         <Route path="/singleProduct/:id" element={<SingleProductPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

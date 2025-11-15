@@ -23,7 +23,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-10 md:py-8 bg-white"> 
+    <section className="py-10 md:py-8"> 
       <div className="container mx-auto px-4 md:px-6">
 
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12">
@@ -34,7 +34,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="bg-gray-50 rounded-xl p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition-all duration-300"
+              className="bg-white rounded-xl p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <p className="text-gray-700 mb-3 md:mb-4 italic text-sm md:text-base">
                 "{testimonial.text}"
