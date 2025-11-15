@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function Logo() {
+const Logo = ({ className = "" }) => {
   return (
-    <div className="text-2xl font-bold text-black">
-      {/* Logo click par home page */}
-      <Link to="/">LuxuryBrand</Link>
+    <div className={` ${className}`}>
+      <h1 className="text-2xl font-bold text-[var(--text-primary)] cursor-pointer">
+        ShopMate
+      </h1>
     </div>
   );
-}
+};
 
 export default Logo;

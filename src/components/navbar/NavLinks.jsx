@@ -1,31 +1,31 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-// Links ko array me define kiya
-const links = [
-  { name: "Home", path: "/" },
-  { name: "Shop", path: "/shop" },
-  { name: "About", path: "/about" },
-  { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
-];
+const NavLinks = ({ links = [], isMobile = false, className = "" }) => {
+  const routeMap = {
+    Home: "/",
+    Shop: "/products",
+    Categories: "/categories",
+    About: "/about",
+    Contact: "/contact",
+  };
 
-function NavLinks() {
   return (
-    <ul className="flex gap-6">
-      {links.map((link, index) => (
-        <li key={index}>
-          {/* React Router Link use kiya taaki page reload na ho */}
-          <Link
-            to={link.path}
-            className="hover:text-gray-500 transition-colors"
-          >
-            {link.name}
-          </Link>
-        </li>
+    <div
+      className={`${isMobile ? "space-y-2" : "hidden lg:flex space-x-6 items-center"} ${className}`}
+    >
+      {links.map((link) => (
+        <Link
+          key={link}
+          to={routeMap[link] || "/"}
+          className={`border-b-2 rounded px-2 border-white text-[var(--text-primary)] text-lg hover:border-b-2 hover:border-[var(--text-primary)] font-medium transition-colors duration-200 ${
+            isMobile ? "block" : ""
+          }`}
+        >
+          {link}
+        </Link>
       ))}
-    </ul>
+    </div>
   );
-}
+};
 
 export default NavLinks;

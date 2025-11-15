@@ -1,15 +1,20 @@
 import React from "react";
+import { IoSearch } from "react-icons/io5";
 
-function Searchbar() {
+const SearchBar = ({ isMobile = false }) => {
+  const containerClass = isMobile ? "flex mt-2" : "hidden md:flex";
+  const inputClass = isMobile ? "flex-1 rounded-l-md focus:outline-none" : "w-40 rounded-l-md focus:outline-none";
+
   return (
-    <div className="relative">
-      <input
-        type="text"
-        placeholder="Search..."
-        className="border border-gray-300 rounded-full py-1 px-4 focus:outline-none focus:ring-2 focus:ring-gray-400"
-      />
+    <div className={containerClass}>
+      <div className="flex bg-gray-200 px-3 py-1.5 rounded-4xl">
+        <input type="text" placeholder="Search" className={inputClass} />
+        <button className="rounded-r-md transition-colors duration-200 cursor-pointer">
+          <IoSearch size={24} />
+        </button>
+      </div>
     </div>
   );
-}
+};
 
-export default Searchbar;
+export default SearchBar;
