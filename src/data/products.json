@@ -1,178 +1,190 @@
 [
   {
-    "id": "6739e7b6a3f92bce100001",
+    "id": "prod-001",
     "name": "Nike Air Max 270",
     "description": "Comfortable running shoes with modern design and breathable fabric.",
-    "price": 8999,
-    "discountedPrice": 7499,
-    "sizes": ["6", "7", "8", "9", "10"],
-    "category": "shoes",
-    "img": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-    "ratings": 4.5,
-    "reviews": [
-  {
-    "name": "Shazeb Khan",
-    "rating": 4.5,
-    "comment": "Perfume smells amazing, lasts all day!",
+    "brand": "Nike",
+    "price": 7599,
+    "currency": "INR",
+    "discount": {
+      "active": true,
+      "percentage": 10
+    },
+    "sizes": [6, 7, 8, 9, 10],
+    "category": "sneakers",
+    "img": "https://images.pexels.com/photos/17825341/pexels-photo-17825341.jpeg",
     "images": [
-      "src/assets/reviews/rev1.jpg",
-      "src/assets/reviews/rev2.jpg",
-      "src/assets/reviews/rev3.jpg"
-    ]
-  },
-  {
-    "name": "Ayaan",
-    "rating": 5,
-    "comment": "Loved it! Totally worth it.",
-    "images": []
-  }
-],
+      "https://images.pexels.com/photos/17825341/pexels-photo-17825341.jpeg",
+      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      "https://images.pexels.com/photos/2529158/pexels-photo-2529158.jpeg"
+    ],
+    "ratings": {
+      "average": 4.6,
+      "count": 125,
+      "reviews": [
+        {
+          "name": "Ayaan",
+          "rating": 4.5,
+          "comment": "Very comfortable and stylish. Best for daily running."
+        },
+        {
+          "name": "Rohan",
+          "rating": 5,
+          "comment": "Amazing fit and cushioning. Totally worth it!"
+        }
+      ]
+    },
     "stock": 12,
     "isFeatured": true,
     "createdAt": "2025-11-08T14:00:00.000Z",
     "updatedAt": "2025-11-08T14:25:00.000Z"
   },
+
   {
-    "id": "6739e7b6a3f92bce100002",
-    "name": "Adidas Ultraboost 22",
-    "description": "Premium performance running shoes with energy return cushioning.",
-    "price": 10999,
-    "discountedPrice": 9499,
-    "sizes": ["6", "7", "8", "9", "10", "11"],
-    "category": "shoes",
-    "img": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111",
-    "ratings": 4.7,
-    "reviews": [],
-    "stock": 8,
-    "isFeatured": false,
-    "createdAt": "2025-11-08T14:00:00.000Z",
-    "updatedAt": "2025-11-08T14:25:00.000Z"
-  },
-  {
-    "id": "6739e7b6a3f92bce100003",
-    "name": "Casio G-Shock GA-2100",
-    "description": "Durable and stylish analog-digital watch with carbon core guard structure.",
-    "price": 12999,
-    "discountedPrice": 10999,
-    "sizes": ["One Size"],
-    "category": "watch",
-    "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-    "ratings": 4.6,
-    "reviews": [],
-    "stock": 15,
-    "isFeatured": true,
-    "createdAt": "2025-11-08T14:00:00.000Z",
-    "updatedAt": "2025-11-08T14:25:00.000Z"
-  },
-  {
-    "id": "6739e7b6a3f92bce100004",
-    "name": "Fossil Gen 6 Smartwatch",
-    "description": "Next-gen smartwatch with heart rate monitor, Alexa support, and AMOLED display.",
-    "price": 22999,
-    "discountedPrice": 19999,
-    "sizes": ["One Size"],
-    "category": "watch",
-    "img": "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
-    "ratings": 4.4,
-    "reviews": [],
-    "stock": 10,
-    "isFeatured": false,
-    "createdAt": "2025-11-08T14:00:00.000Z",
-    "updatedAt": "2025-11-08T14:25:00.000Z"
-  },
-  {
-    "id": "6739e7b6a3f92bce100005",
-    "name": "Dior Sauvage Eau de Parfum",
-    "description": "Powerful and fresh fragrance for men with woody and spicy notes.",
-    "price": 9999,
-    "discountedPrice": 8499,
-    "sizes": ["50 ML", "100 ML", "200 ML"],
-    "category": "perfume",
-    "img": "https://images.unsplash.com/photo-1661625079424-dc3870671f24",
-    "ratings": 4.8,
-    "reviews": [],
-    "stock": 25,
-    "isFeatured": true,
-    "createdAt": "2025-11-08T14:00:00.000Z",
-    "updatedAt": "2025-11-08T14:25:00.000Z"
-  },
-  {
-    "id": "6739e7b6a3f92bce100006",
-    "name": "Versace Eros",
-    "description": "A bold fragrance with fresh mint leaves, Italian lemon zest, and vanilla notes.",
-    "price": 8799,
-    "discountedPrice": 7599,
-    "sizes": ["50 ML", "100 ML", "200 ML"],
-    "category": "perfume",
-    "img": "https://images.unsplash.com/photo-1672060761081-821ddc80299a",
-    "ratings": 4.6,
-    "reviews": [],
+    "id": "prod-002",
+    "name": "Adidas Ultra Run",
+    "description": "Lightweight and flexible running shoes built for performance.",
+    "brand": "Adidas",
+    "price": 6899,
+    "currency": "INR",
+    "discount": {
+      "active": false,
+      "percentage": 0
+    },
+    "sizes": [6, 7, 8, 9, 10],
+    "category": "running shoes",
+    "img": "https://images.pexels.com/photos/1599005/pexels-photo-1599005.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/1599005/pexels-photo-1599005.jpeg",
+      "https://images.pexels.com/photos/1599006/pexels-photo-1599006.jpeg",
+      "https://images.pexels.com/photos/1599004/pexels-photo-1599004.jpeg"
+    ],
+    "ratings": {
+      "average": 4.4,
+      "count": 98,
+      "reviews": [
+        {
+          "name": "Farhan",
+          "rating": 4,
+          "comment": "Good comfort, perfect for jogging."
+        },
+        {
+          "name": "Imran",
+          "rating": 5,
+          "comment": "Very lightweight and breathable!"
+        }
+      ]
+    },
     "stock": 20,
     "isFeatured": false,
     "createdAt": "2025-11-08T14:00:00.000Z",
     "updatedAt": "2025-11-08T14:25:00.000Z"
   },
+
   {
-    "id": "6739e7b6a3f92bce100007",
-    "name": "Ray-Ban Aviator Classic",
-    "description": "Timeless pilot sunglasses with crystal green lenses and gold frame.",
-    "price": 6999,
-    "discountedPrice": 5999,
-    "sizes": ["One Size"],
-    "category": "sunglasses",
-    "img": "https://images.unsplash.com/photo-1654257650833-b7398115275a",
-    "ratings": 4.7,
-    "reviews": [],
-    "stock": 18,
-    "isFeatured": true,
-    "createdAt": "2025-11-08T14:00:00.000Z",
-    "updatedAt": "2025-11-08T14:25:00.000Z"
-  },
-  {
-    "id": "6739e7b6a3f92bce100008",
-    "name": "Oakley Holbrook",
-    "description": "Stylish sunglasses with polarized lenses and lightweight frame.",
-    "price": 8499,
-    "discountedPrice": 7299,
-    "sizes": ["One Size"],
-    "category": "sunglasses",
-    "img": "https://plus.unsplash.com/premium_photo-1755752691552-7ae5a02469d1",
-    "ratings": 4.3,
-    "reviews": [],
-    "stock": 22,
+    "id": "prod-003",
+    "name": "Bata Classic Formal",
+    "description": "Premium leather formal shoes crafted for office and events.",
+    "brand": "Bata",
+    "price": 3499,
+    "currency": "INR",
+    "discount": {
+      "active": true,
+      "percentage": 15
+    },
+    "sizes": [7, 8, 9, 10, 11],
+    "category": "formal shoes",
+    "img": "https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg",
+      "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg",
+      "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg"
+    ],
+    "ratings": {
+      "average": 4.3,
+      "count": 76,
+      "reviews": [
+        {
+          "name": "Karan",
+          "rating": 4.2,
+          "comment": "Good quality leather and comfortable."
+        }
+      ]
+    },
+    "stock": 10,
     "isFeatured": false,
     "createdAt": "2025-11-08T14:00:00.000Z",
     "updatedAt": "2025-11-08T14:25:00.000Z"
   },
+
   {
-    "id": "6739e7b6a3f92bce100009",
-    "name": "Bomber Jacket",
-    "description": "Classic black leather jacket with premium stitching and zip closure.",
-    "price": 12999,
-    "discountedPrice": 11499,
-    "sizes": ["S", "M", "L", "XL", "XXL"],
-    "category": "jacket",
-    "img": "https://plus.unsplash.com/premium_photo-1671030274122-b6ac34f87b8b",
-    "ratings": 4.5,
-    "reviews": [],
-    "stock": 9,
-    "isFeatured": true,
-    "createdAt": "2025-11-08T14:00:00.000Z",
-    "updatedAt": "2025-11-08T14:25:00.000Z"
-  },
-  {
-    "id": "6739e7b6a3f92bce100010",
-    "name": "Trucker Jacket",
-    "description": "Stylish blue denim jacket with a comfortable fit and vintage wash.",
+    "id": "prod-004",
+    "name": "Puma Solid Max",
+    "description": "Durable sports shoes suitable for training and outdoor running.",
+    "brand": "Puma",
     "price": 5999,
-    "discountedPrice": 4999,
-    "sizes": ["S", "M", "L", "XL"],
-    "category": "jacket",
-    "img": "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7",
-    "ratings": 4.2,
-    "reviews": [],
-    "stock": 14,
-    "isFeatured": false,
+    "currency": "INR",
+    "discount": {
+      "active": true,
+      "percentage": 5
+    },
+    "sizes": [6, 7, 8, 9, 10],
+    "category": "sports shoes",
+    "img": "https://images.pexels.com/photos/40662/shoes-footwear-hiking-shoes-walking-40662.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/40662/shoes-footwear-hiking-shoes-walking-40662.jpeg",
+      "https://images.pexels.com/photos/3622462/pexels-photo-3622462.jpeg",
+      "https://images.pexels.com/photos/631165/pexels-photo-631165.jpeg"
+    ],
+    "ratings": {
+      "average": 4.5,
+      "count": 102,
+      "reviews": [
+        {
+          "name": "Rizwan",
+          "rating": 4.7,
+          "comment": "Strong grip and comfortable padding!"
+        }
+      ]
+    },
+    "stock": 15,
+    "isFeatured": true,
+    "createdAt": "2025-11-08T14:00:00.000Z",
+    "updatedAt": "2025-11-08T14:25:00.000Z"
+  },
+
+  {
+    "id": "prod-005",
+    "name": "Magda Leather Boots",
+    "description": "Tough leather boots designed for winter and trekking.",
+    "brand": "Reebok",
+    "price": 7999,
+    "currency": "INR",
+    "discount": {
+      "active": false,
+      "percentage": 0
+    },
+    "sizes": [6, 7, 8, 9, 10],
+    "category": "boots",
+    "img": "https://images.pexels.com/photos/3158128/pexels-photo-3158128.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3158128/pexels-photo-3158128.jpeg",
+      "https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg",
+      "https://images.pexels.com/photos/3158129/pexels-photo-3158129.jpeg"
+    ],
+    "ratings": {
+      "average": 4.8,
+      "count": 90,
+      "reviews": [
+        {
+          "name": "Sameer",
+          "rating": 5,
+          "comment": "Excellent quality boots, perfect for travel!"
+        }
+      ]
+    },
+    "stock": 8,
+    "isFeatured": true,
     "createdAt": "2025-11-08T14:00:00.000Z",
     "updatedAt": "2025-11-08T14:25:00.000Z"
   }
