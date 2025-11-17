@@ -1,0 +1,81 @@
+import React, { useState } from "react";
+import Rating from "@mui/material/Rating";
+import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
+import Button from "./Button";
+import { FaCartPlus } from "react-icons/fa6";
+import { IoBagHandle } from "react-icons/io5";
+import { formatCurrency } from "../../utils/formatCurrency";
+
+function ProductCard({ card }) {
+  const {
+    img = "",
+    name,
+    price,
+    ratings,
+    rating,
+    discount
+  } = card;
+
+  const [addToCard, setAddToCard] = useState(false);
+
+  const ratingValue = ratings?.average ?? rating ?? 0;
+
+  const discountedPrice = Math.round(price - (price * (discount?.percentage ?? 0) / 100));
+
+  return (
+    <div className="shadow-md rounded w-41 md:w-60 h-80 relative">
+      <img
+        src={img}
+        alt="img"
+        className="object-cover rounded w-full h-[58%]"
+      />
+
+      <div
+        className="absolute top-2 right-2 p-1 bg-black/30 rounded-full text-2xl cursor-pointer"
+        onClick={() => setAddToCard(!addToCard)}
+      >
+        {addToCard ? (
+          <IoMdHeart className="text-red-500 transition-all duration-300" />
+        ) : (
+          <IoMdHeartEmpty className="text-white transition-all duration-300" />
+        )}
+      </div>
+
+      <div className="px-2 py-0 flex flex-col gap-0.5">
+        <h2 className="text-lg truncate">{name}</h2>
+
+        <p className="text-xs md:text-base">
+          {formatCurrency(discountedPrice, "INR")}{" "}
+          <span className="text-gray-500 line-through">
+            {formatCurrency(price, "INR")}
+          </span>
+        </p>
+
+        <Rating name="read-only" value={ratingValue} readOnly size="small" />
+
+        <div className="flex items-center justify-center py-1 gap-2">
+          <Button
+            variant="outline"
+            text="Add"
+            icon={FaCartPlus}
+            width="w-16 md:w-25"
+            textSize="text-xs"
+            px="0"
+          />
+
+          <Button
+            variant="solid"
+            text="Buy"
+            icon={IoBagHandle}
+            width="w-16 md:w-25"
+            textSize="text-xs"
+            px="0"
+            onClick={() => console.log("buy clicked")}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ProductCard;

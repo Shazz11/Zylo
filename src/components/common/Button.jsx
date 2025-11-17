@@ -7,9 +7,9 @@ function Button({
   width = "w-auto",
   textSize = "text-base",
   gap = "gap-2",
-  px = "px-5",
-  py = "py-2",
-  type = "button",  // <-- IMPORTANT
+  px = "px-0",
+  py = "py-0",
+  type = "button",  
   onClick,
 }) {
   const wrapperClasses = `
@@ -33,7 +33,7 @@ function Button({
       <button
         type={type}
         onClick={onClick}
-        className="w-full h-full flex items-center justify-center focus:outline-none"
+        className="w-20 h-full flex items-center justify-center focus:outline-none"
       >
         {Icon && <Icon className="text-lg mr-1" />}
         {text}
