@@ -6,10 +6,18 @@ import { IoBagHandle } from "react-icons/io5";
 import Carousel from "../common/Carousel";
 import { useContext } from "react";
 import { ProductContext } from "../../context/ProductContext"
+import { useEffect } from "react";
+
+
 
 function NewArrivalsPage() {
-
+  // const { singleLoading, singleProduct, getSingleProduct } = useContext(ProductContext);
   const {data, loading} = useContext(ProductContext);
+
+//   useEffect(() => {
+//   getSingleProduct("prod-001");
+// }, []);
+
 
   if(loading) return <p>Loading...</p>
 
