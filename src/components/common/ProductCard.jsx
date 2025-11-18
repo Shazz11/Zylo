@@ -5,25 +5,27 @@ import Button from "./Button";
 import { FaCartPlus } from "react-icons/fa6";
 import { IoBagHandle } from "react-icons/io5";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { useNavigate } from "react-router-dom";
+import { navigateToSnglProduct } from "../../utils/navigateToSnglProduct";
 
 function ProductCard({ card }) {
-  const {
-    img = "",
-    name,
-    price,
-    ratings,
-    rating,
-    discount
-  } = card;
+  const { id, img = "", name, price, ratings, rating, discount } = card;
 
   const [addToCard, setAddToCard] = useState(false);
 
   const ratingValue = ratings?.average ?? rating ?? 0;
 
-  const discountedPrice = Math.round(price - (price * (discount?.percentage ?? 0) / 100));
+  const discountedPrice = Math.round(
+    price - (price * (discount?.percentage ?? 0)) / 100
+  );
+
+  const navigate = useNavigate();
 
   return (
-    <div className="shadow-md rounded w-41 md:w-60 h-80 relative">
+    <div
+      className="shadow-md rounded w-41 md:w-60 h-80 relative"
+      onClick={() => navigateToSnglProduct(navigate, id)}
+    >
       <img
         src={img}
         alt="img"
@@ -55,22 +57,29 @@ function ProductCard({ card }) {
 
         <div className="flex items-center justify-center py-1 gap-2">
           <Button
-            variant="outline"
-            text="Add"
-            icon={FaCartPlus}
-            width="w-16 md:w-25"
-            textSize="text-xs"
-            px="0"
-          />
-
-          <Button
             variant="solid"
             text="Buy"
             icon={IoBagHandle}
             width="w-16 md:w-25"
             textSize="text-xs"
             px="0"
-            onClick={() => console.log("buy clicked")}
+            onClick={(e) => {
+              e.stopPropagation(); // stop bubble effect (stop to trigger div onclick function)
+              alert("clicked on  Buy Now");
+            }}
+          />
+
+          <Button
+            variant="outline"
+            text="Add"
+            icon={FaCartPlus}
+            width="w-16 md:w-25"
+            textSize="text-xs"
+            px="0"
+            onClick={(e) => {
+              e.stopPropagation(); // stop bubble effect (stop to trigger div onclick function)
+              alert("clicked on Add to Cart");
+            }}
           />
         </div>
       </div>

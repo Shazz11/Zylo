@@ -3,21 +3,14 @@ import ProductCard from "../common/ProductCard";
 import Button from "../common/Button";
 import { FaCartPlus } from "react-icons/fa6";
 import { IoBagHandle } from "react-icons/io5";
+import { FaRegEye } from "react-icons/fa";
 import Carousel from "../common/Carousel";
 import { useContext } from "react";
 import { ProductContext } from "../../context/ProductContext"
 import { useEffect } from "react";
 
-
-
 function NewArrivalsPage() {
-  // const { singleLoading, singleProduct, getSingleProduct } = useContext(ProductContext);
   const {data, loading} = useContext(ProductContext);
-
-//   useEffect(() => {
-//   getSingleProduct("prod-001");
-// }, []);
-
 
   if(loading) return <p>Loading...</p>
 
