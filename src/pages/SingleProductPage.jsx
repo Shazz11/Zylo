@@ -5,6 +5,7 @@ import { IoBagHandle } from "react-icons/io5";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
+import Rating from "../components/common/Rating";
 
 function SingleProductPage() {
   const { id } = useParams();
@@ -85,11 +86,10 @@ function SingleProductPage() {
           <p className="text-xs md:text-base md:w-1/2">{description}</p>
 
           <div className="text-xs md:text-base flex gap-3 items-center">
-            <span className="bg-green-500 flex items-center gap-1 px-3 py-1 rounded text-white">
-              <FaStar className="text-yellow-300" /> {ratings?.average}
-            </span>
+            <Rating value={ratings?.average} variant="large"/>
             <span>|</span>
             <span>{ratings?.count || 0} Reviews</span>
+            
           </div>
 
           <div className="flex gap-2 text-xs md:text-base">
@@ -195,10 +195,7 @@ function SingleProductPage() {
               <div className="flex gap-2 items-center">
                 <span className="font-bold">{r.name}</span>
                 <span>|</span>
-                <span className="bg-green-500 px-3 py-1 rounded text-white flex gap-1">
-                  <FaStar className="text-yellow-300" />
-                  {r.rating}
-                </span>
+                <Rating value={r.rating}/>
               </div>
 
               <p>{r.comment}</p>

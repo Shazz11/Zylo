@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Rating from "../common/Rating";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -30,7 +31,7 @@ function HeroSection() {
     },
   ];
   return (
-    <div className="w-full h-50 md:min-h-130 relative">    
+    <div className="w-full h-50 md:min-h-130 relative">  
     <Swiper
       modules={[Autoplay, Pagination, Navigation]}
       autoplay={{ delay: 3000, disableOnInteraction: false }}

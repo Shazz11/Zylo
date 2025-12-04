@@ -20,7 +20,7 @@ const Navbar = () => {
           <NavLinks links={navLinks} />
 
           <div className="flex items-center md:space-x-2">
-            {/* <SearchBar /> */}
+            <SearchBar />
             <UserMenu />
 
             {/* Mobile menu button */}

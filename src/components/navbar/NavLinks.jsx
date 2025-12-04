@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavLinks = ({ links = [], isMobile = false, className = "" }) => {
   const routeMap = {
     Home: "/",
-    Shop: "/products",
+    Shop: "/shop",
     Categories: "/categories",
     About: "/about",
     Contact: "/contact",

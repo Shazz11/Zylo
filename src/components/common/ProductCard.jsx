@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Rating from "@mui/material/Rating";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import Button from "./Button";
 import { FaCartPlus } from "react-icons/fa6";
@@ -7,23 +6,20 @@ import { IoBagHandle } from "react-icons/io5";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { useNavigate } from "react-router-dom";
 import { navigateToSnglProduct } from "../../utils/navigateToSnglProduct";
+import Rating from "./Rating";
 
 function ProductCard({ card }) {
-  const { id, img = "", name, price, ratings, rating, discount } = card;
+  const { id, img = "", name, price, ratings, rating, discountedPrice } = card;
 
   const [addToCard, setAddToCard] = useState(false);
 
   const ratingValue = ratings?.average ?? rating ?? 0;
 
-  const discountedPrice = Math.round(
-    price - (price * (discount?.percentage ?? 0)) / 100
-  );
-
   const navigate = useNavigate();
 
   return (
     <div
-      className="shadow-md rounded w-41 md:w-60 h-80 relative"
+      className="shadow-md rounded w-auto md:w-60 h-80 relative"
       onClick={() => navigateToSnglProduct(navigate, id)}
     >
       <img
@@ -53,14 +49,16 @@ function ProductCard({ card }) {
           </span>
         </p>
 
-        <Rating name="read-only" value={ratingValue} readOnly size="small" />
+        <span>
+          <Rating value={ratingValue} variant="small"/>
+        </span>
 
-        <div className="flex items-center justify-center py-1 gap-2">
+        <div className="flex items-center py-1 gap-2">
           <Button
             variant="solid"
             text="Buy"
             icon={IoBagHandle}
-            width="w-16 md:w-25"
+            width="w-16 md:w-full"
             textSize="text-xs"
             px="0"
             onClick={(e) => {
@@ -73,7 +71,7 @@ function ProductCard({ card }) {
             variant="outline"
             text="Add"
             icon={FaCartPlus}
-            width="w-16 md:w-25"
+            width="w-16 md:w-full"
             textSize="text-xs"
             px="0"
             onClick={(e) => {

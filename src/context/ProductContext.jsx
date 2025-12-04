@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import { allProductReducer, allProductInitialState, singleProductReducer, singleInitialState } from "../reducer/productReducer";
 
@@ -24,11 +24,9 @@ export const ProductProvider = ({ children }) => {
       const res = await axios.get(url);
       const products = await res.data
       allProductDispatch({ type: "SUCCESS", payload: products }); // send data
-      console.log("Products Loaded:", res.data);
 
     } catch (error) {
       allProductDispatch({ type: "ERROR", payload: error.message });
-      console.log("Error fetching products:", error);
     }
   };
 
@@ -73,3 +71,8 @@ export const ProductProvider = ({ children }) => {
     </ProductContext.Provider>
   );
 };
+
+// custom  hooks
+export const useProductContext = () =>{
+  return useContext(ProductContext);
+}

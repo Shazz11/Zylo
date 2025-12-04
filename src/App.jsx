@@ -5,11 +5,11 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ErrorPage from "./pages/ErrorPage";
-import ProductsPage from "./pages/ProductsPage";
 import SingleProductPage from "./pages/SingleProductPage";
 import Navbar from "./components/navbar/Navbar";
 import Footer from './components/footer/Footer';
 import TestProducts from './pages/TestProducts';
+import ShopPage from './pages/ShopPage';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/shop" element={<ShopPage />} />
         <Route path="/product/:id" element={<SingleProductPage />} />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/categories" element={<TestProducts />} />
