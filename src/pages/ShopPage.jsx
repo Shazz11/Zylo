@@ -18,11 +18,11 @@ function ShopPage() {
   }
 
   return (
-    <div className="pt-1 flex flex-col md:flex-row justify-around bg-gray-50">
+    <div className="pt-1 md:px-3 flex flex-col md:flex-row md:gap-4 justify-around bg-gray-50  h-screen md:overflow-hidden">
   
       <Filters/>
       
-      <div className='rounded bg-white'>
+      <div className='rounded bg-white w-full'>
         {/* Header  */}
         <div className='flex justify-between px-3 py-4 rounded'>
           <span className='text-2xl font-bold'>Shop All Products</span>
@@ -31,7 +31,9 @@ function ShopPage() {
           </div>
         </div>
 
-        <ProductList products={filterProducts}/>
+        <div className='md:overflow-y-auto md:h-screen scroll-hidden'>
+          <ProductList products={filterProducts}/>
+        </div>
       </div>
     </div>
   )

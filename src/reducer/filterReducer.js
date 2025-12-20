@@ -87,8 +87,8 @@ export const filterReducer = (state, action) => {
 
     // ------------------------------
     // update filters
-    // ------------------------------ 
-    case "UPDATE_FILTERS_VALUE":{
+    // ------------------------------
+    case "UPDATE_FILTERS_VALUE": {
       const { name, value } = action.payload;
       return {
         ...state,
@@ -97,25 +97,40 @@ export const filterReducer = (state, action) => {
           [name]: value,
         },
       };
-      }
+    }
 
-    case "FILTER_PRODUCTS":{
+    case "FILTER_PRODUCTS": {
       let { allProducts } = state;
       let tempFilterProduct = [...allProducts];
 
-      const {text} = state.filters;
+      const { text, category, brand } = state.filters;
 
-      if(text){
-        tempFilterProduct = tempFilterProduct.filter((curElem)=>{
-          return curElem.name.toLowerCase().includes(text.toLowerCase()); 
-        })
+      // TEXT FILTER
+      if (text) {
+        tempFilterProduct = tempFilterProduct.filter((curElem) =>
+          curElem.name.toLowerCase().includes(text.toLowerCase())
+        );
+      }
+
+      // CATEGORY FILTER
+      if (category) {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.category?.toLowerCase() === category.toLowerCase()
+        );
+      }
+
+      // BRAND FILTER
+      if (brand) {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.brand === brand
+        );
       }
 
       return {
         ...state,
         filterProducts: tempFilterProduct,
       };
-      }
+    }
 
     // ------------------------------
     // Default return

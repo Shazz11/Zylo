@@ -24,7 +24,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
         <Route path="/categories" element={<TestProducts />} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

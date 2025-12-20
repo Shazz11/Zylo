@@ -13,6 +13,10 @@ const initialState = {
   sortingValue: "", // stores dropdown value
   filters: {
     text: "",
+    category: "",
+    brand: "",
+    size: "",
+    color: "",
   },
 };
 
@@ -46,7 +50,7 @@ export const FilterContextProvider = ({ children }) => {
   // ------------------------------
   useEffect(() => {
     dispatch({ type: "SORTING_PRODUCTS" });
-  }, [state.sortingValue, state.filterProducts]);
+  }, [state.sortingValue]);
 
   // ------------------------------
   // RUN FILTER EWHENERVER FILTERS CHANGE
